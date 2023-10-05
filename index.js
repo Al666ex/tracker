@@ -25,7 +25,7 @@ app.get('/',(req,res) => {
 */
 const start  = async () =>{
     try {
-        /*connect to DB*/
+        /*подключаемся к DB*/
         await sequelize.authenticate();
         /*check the database state against the data schema*/
         await sequelize.sync();
