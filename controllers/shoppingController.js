@@ -1,8 +1,8 @@
 const {Shopping, Product} = require('../models/models');
 class ShoppingController{
     async create(req,res){
-        const {price} = req.body;
-        const order = await Shopping.create({price})
+        const {price,userId,productId} = req.body;
+        const order = await Shopping.create({price,userId,productId});
         return res.json(order);
     }
 

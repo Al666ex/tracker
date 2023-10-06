@@ -56,6 +56,7 @@ class UserController{
 
     async check(req,res,next){
         return res.json({message : 'check is working'})
+     
 
     }
 }
