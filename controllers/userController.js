@@ -56,8 +56,8 @@ class UserController{
 
     async check(req,res,next){
         return res.json({message : 'check is working'})
-     
-
+        const token = generateJvt(req.user.id,req.user.email,req.user.role)
+        return req.json(token)
     }
 }
 
